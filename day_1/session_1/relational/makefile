@@ -1,10 +1,8 @@
 all:
 
-		vlib work;
-		vlog -sv relational_code.sv
-		vsim relational_code -l relational_code_output.log -c -do "run -all;quit;"
+		make clear;make compile;make simulate
 compile:
-		vlib work;
+		vlib work
 		vlog -sv relational_code.sv
 
 simulate:
@@ -12,6 +10,6 @@ simulate:
 
 clear:
 		clearall:
-			make clear;make compile;make simulate
+			
 
 
